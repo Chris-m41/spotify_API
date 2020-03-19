@@ -27,7 +27,7 @@ const path = require('path');
 
 var client_id = '3e06758a3a804f2381a57c86f9358555'; // Your client id
 var client_secret = '3bbac7fb18844204a2a4ce2cfef64c11'; // Your secret
-var redirect_uri = 'http://localhost:8888/callback'; // Your redirect uri
+var redirect_uri = 'https://agile-plains-71783.herokuapp.com/callback'; // Your redirect uri
 
 /**
  * Generates a random string containing numbers and letters
