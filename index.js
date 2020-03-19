@@ -17,7 +17,7 @@
  * For more information, read
  * https://developer.spotify.com/web-api/authorization-guide/#authorization_code_flow
  */
-
+const port = process.env.PORT || 5000;
 var express = require('express'); // Express web server framework
 var request = require('request'); // "Request" library
 var cors = require('cors');
@@ -47,6 +47,11 @@ var generateRandomString = function(length) {
 var stateKey = 'spotify_auth_state';
 
 var app = express();
+
+// start the server listening
+app.listen(port, function() {
+    console.log('Node app is running on port', port);
+});
 
 app.use(express.static(__dirname + '/public'))
     .use(cors())
@@ -158,5 +163,5 @@ app.get('/refresh_token', function(req, res) {
     });
 });
 
-console.log('Listening on 8888');
-app.listen(8888);
+// console.log('Listening on 8888');
+// app.listen(8888);
