@@ -79,7 +79,7 @@
                 <option value="artist">artist</option>
                 <option value="album">album</option>
             </select>
-            <div id="button">Go</div>
+            <div id="Go">Go</div>
         </div>
 
         <div class="results"></div>
@@ -94,7 +94,7 @@
         (function() {
             var moreVal = 0;
 
-            $("#button").on("click", function() {
+            $("#Go").on("click", function() {
                 $.ajax({
                     url: "https://elegant-croissant.glitch.me/spotify",
                     data: {
